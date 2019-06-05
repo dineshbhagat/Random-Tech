@@ -247,11 +247,12 @@ public class FlatBuffer {
 
         // get objects from file and deserialize it
 
-        readDataFromFile();
+        readDataFromFile("articleData.art");
+        // readDataFromFile("Article.bin"); // this file we will be creating in following step
     }
 
-    private static void readDataFromFile() {
-        File file = new File("articleData.art");
+    private static void readDataFromFile(String filename) {
+        File file = new File(filename);
         RandomAccessFile f = null;
         try {
             f = new RandomAccessFile(file, "r");
@@ -295,6 +296,14 @@ Comment1Id : 1
 Comment1 : This is my first comment to article on flatbuffer
 Comment2 : This is my second comment to article on flatbuffer
 Comment2Id : 2
+
+articleText : This is my first article text from binary file created using json
+articleId : 5
+Total comments for article : 2
+Comment1Id : 1
+Comment1 : This is first comment to article from binary file created using json
+Comment2 : This is second comment to article from binary file created using json
+Comment2Id : 2
  */
 ```
 
@@ -305,16 +314,16 @@ Json file
 
 ```java
 {
-  "id": 1,
-  "articleText": "This is my first article text",
+  "id": 5,
+  "articleText": "This is my first article text from binary file created using json",
   "comments" : [
     {
       "id": 1,
-      "comment_str": "This is first comment to article"
+      "comment_str": "This is first comment to article from binary file created using json"
     },
     {
       "id": 2,
-      "comment_str": "This is second comment to article"
+      "comment_str": "This is second comment to article from binary file created using json"
     }
   ]
 }
