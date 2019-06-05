@@ -4,7 +4,7 @@
 - [IDL](#idl)
 - [Install flatc and compile](#install-flatc-and-compile)
 - [code](#code)
-- [Convert Json to IDL file](#convert-json-to-idl-file)
+- [Convert Json to Binary File using Schema File](#convert-json-to-binary-file-using-schema-file)
 - [Ref:](#ref)
 
 
@@ -299,23 +299,31 @@ Comment2Id : 2
 ```
 
 
-
-#### Convert Json to IDL file
+#### Convert Json to Binary File using Schema File
 
 Json file
 
 ```java
 {
-  pos: {
-    x: 1,
-    y: 2,
-    z: 3
-  },
-  hp: 300,
-  name: "Orc"
+  "id": 1,
+  "articleText": "This is my first article text",
+  "comments" : [
+    {
+      "id": 1,
+      "comment_str": "This is first comment to article"
+    },
+    {
+      "id": 2,
+      "comment_str": "This is second comment to article"
+    }
+  ]
 }
 ```
-
+Command to convert to binary file
+```sh
+./flatc -o <path-where-you-want-your-bin-file> -b Article.fbs Article.json
+```
+This will generate file with name Article.bin which will contain the FlatBuffer binary representation of the contents from our Article.json file.
 
 
 #### Ref:
