@@ -55,6 +55,7 @@ table Article {
   id:int;
   comments:[Comment];
 }
+root_type Article;
 ```
 
 ```java
