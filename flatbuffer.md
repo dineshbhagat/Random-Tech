@@ -339,3 +339,7 @@ https://github.com/mzaks/FlatBuffersSwift/wiki/FlatBuffers-Explained
 https://github.com/ScreamingUdder/wiki/wiki/Sending-FlatBuffers-through-Kafka-in-Java
 
 https://github.com/google/flatbuffers/blob/master/tests/JavaTest.java
+
+Language Level features: https://google.github.io/flatbuffers/flatbuffers_support.html
+
+
