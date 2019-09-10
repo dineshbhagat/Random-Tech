@@ -12,8 +12,8 @@ Installation:
 
 
 To have launchd start telegraf now and restart at login:  
-  `brew services start telegraf`
+  `brew services start telegraf`  
 Or, if you don't want/need a background service you can just run:  
-  `telegraf -config /usr/local/etc/telegraf.conf`
+  `telegraf -config /usr/local/etc/telegraf.conf`  
 
 
