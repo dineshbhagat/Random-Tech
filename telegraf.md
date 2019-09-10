@@ -41,3 +41,8 @@ To have launchd start chronograf now and restart at login:
 Or, if you don't want/need a background service you can just run:
   chronograf
 ```
+
+
+Ref: https://v2.docs.influxdata.com/v2.0/reference/api/
+
+Default port(TCP) for influxdb:9999
