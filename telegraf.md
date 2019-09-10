@@ -21,4 +21,23 @@ Or, if you don't want/need a background service you can just run:
 
 `brew update;brew install influxdb;brew install chronograf`
 
+Info for influxdb
+```bash
+To have launchd start influxdb now and restart at login:
+  brew services start influxdb
+Or, if you don't want/need a background service you can just run:
+  influxd -config /usr/local/etc/influxdb.conf
+```
 
+info for chronograf and kapacitor
+```bash
+To have launchd start kapacitor now and restart at login:
+  brew services start kapacitor
+Or, if you don't want/need a background service you can just run:
+  kapacitord -config /usr/local/etc/kapacitor.conf
+  
+To have launchd start chronograf now and restart at login:
+  brew services start chronograf
+Or, if you don't want/need a background service you can just run:
+  chronograf
+```
