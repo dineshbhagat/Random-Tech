@@ -6,6 +6,7 @@ Ref:
 - https://github.com/influxdata/telegraf
 - https://www.influxdata.com/time-series-platform/telegraf/
 - https://rootnroll.com/d/telegraf/
+- https://v2.docs.influxdata.com/v2.0/get-started/
 
 Installation: 
 
