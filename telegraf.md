@@ -19,7 +19,7 @@ Or, if you don't want/need a background service you can just run:
   `telegraf -config /usr/local/etc/telegraf.conf`  
 
 
-`brew update;brew install influxdb;brew install chronograf`
+`brew update;brew install influxdb;brew install kapacitor;brew install chronograf`
 
 Info for influxdb
 ```bash
@@ -29,7 +29,7 @@ Or, if you don't want/need a background service you can just run:
   influxd -config /usr/local/etc/influxdb.conf
 ```
 
-info for chronograf and kapacitor
+info for kapacitor and chronograf 
 ```bash
 To have launchd start kapacitor now and restart at login:
   brew services start kapacitor
