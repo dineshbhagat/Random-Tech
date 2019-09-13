@@ -46,3 +46,14 @@ Or, if you don't want/need a background service you can just run:
 Ref: https://v2.docs.influxdata.com/v2.0/reference/api/
 
 Default port(TCP) for influxdb:9999
+
+----
+
+How do you read metrics and what it means?
+
+Ref: https://instrumentalapp.com/docs/instrumentald/system-metrics
+
+https://github.com/influxdata/telegraf/tree/master/plugins/inputs/cpu
+
+https://github.com/influxdata/telegraf/tree/ee056278f5e5860c252be4731280f75c91a40bc0/plugins/inputs
+
