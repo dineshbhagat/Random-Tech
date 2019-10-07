@@ -48,6 +48,7 @@ To have launchd start chronograf now and restart at login:
 Or, if you don't want/need a background service you can just run:
   chronograf
 ```
+chronograf: http://localhost:8888
 
 
 Ref: https://v2.docs.influxdata.com/v2.0/reference/api/
@@ -58,6 +59,13 @@ https://docs.influxdata.com/influxdb/v1.7/introduction/getting-started/
 
 ----
 
+To read messages from statsd
+
+`nc -luv 8125`
+
+8125 -> port at which statsd is running
+
+----
 How do you read metrics and what it means?
 
 Ref: https://instrumentalapp.com/docs/instrumentald/system-metrics
