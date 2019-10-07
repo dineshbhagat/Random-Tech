@@ -47,6 +47,8 @@ Ref: https://v2.docs.influxdata.com/v2.0/reference/api/
 
 Default port(TCP) for influxdb:9999
 
+https://docs.influxdata.com/influxdb/v1.7/introduction/getting-started/
+
 ----
 
 How do you read metrics and what it means?
