@@ -29,6 +29,13 @@ Or, if you don't want/need a background service you can just run:
   influxd -config /usr/local/etc/influxdb.conf
 ```
 
+To integrate with grafana:
+```bash
+influx -precision rfc3339;
+CREATE USER admin WITH PASSWORD 'admin' WITH ALL PRIVILEGES;
+show users;
+```
+
 info for kapacitor and chronograf 
 ```bash
 To have launchd start kapacitor now and restart at login:
