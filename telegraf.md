@@ -2,7 +2,8 @@ Telegraf - Time-Series Data Collector
 InfluxDB - Time-Series Data Storage   
 Chronograf - Time-Series Data Visualization   
 
-Ref:  
+Ref: 
+- https://tianpan.co/notes/168-designing-a-metric-system  
 - https://github.com/influxdata/telegraf
 - https://www.influxdata.com/time-series-platform/telegraf/
 - https://rootnroll.com/d/telegraf/
