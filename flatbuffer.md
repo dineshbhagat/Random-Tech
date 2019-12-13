@@ -67,6 +67,8 @@ table Comment {
 }
 ```
 
+NOTE: on deciding schema, if you have String field and whose values is bounded, then it is best to describe as enum and use enum schema for this, rather than String,  This helps in reducing size significantly.
+
 
 
 #### Install flatc and compile
