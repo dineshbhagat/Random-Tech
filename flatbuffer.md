@@ -237,7 +237,12 @@ public class FlatBuffer {
 
         fbb.finish(article);
         byte[] fbb1Bytes = fbb.sizedByteArray();
-
+        
+        //if you want to get Object from byte buffer, here flatbuffer object is Article but to show the difference
+        ByteBuffer cachedArray = ByteBuffer.wrap(fbb1Bytes);
+        ArticleFlatBufferObject a = ArticleFlatBufferObject.getRootAsArticleFlatBufferObject(cachedArray);
+        
+        
         File file = new File("articleData.art");
         try (RandomAccessFile f = new RandomAccessFile(file, "rw")) {
             f.write(fbb1Bytes);
