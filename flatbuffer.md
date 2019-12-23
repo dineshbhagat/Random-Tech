@@ -215,10 +215,17 @@ public class FlatBuffer {
 
         FlatBufferBuilder fbb = new FlatBufferBuilder(10);
 
+        //1. prepare prerequisite for Comment viz. commentText
         int commentText = fbb.createString("This is my first comment to article on flatbuffer");
+        
+        //2. Start CommentObject
         Comment.startComment(fbb);
         Comment.addCommentStr(fbb, commentText);
+        
+        //Since this is basic data type, we do not need to explicitely prepare before CommentStart
         Comment.addId(fbb, 1);
+        
+        //3. End CommentObject
         int comment1OnArticle1 = Comment.endComment(fbb);
 
         int commentText2 = fbb.createString("This is my second comment to article on flatbuffer");
@@ -226,15 +233,24 @@ public class FlatBuffer {
         Comment.addCommentStr(fbb, commentText2);
         Comment.addId(fbb, 2);
         int comment2OnArticle1 = Comment.endComment(fbb);
+        
+        // ----- end of Comment Preparations  ----
+        
+        //1. prepare prerequisite for Article object, create List of Comments which will be used for ArticleObject
         int commentsForArticleOnFB = fbb.createVectorOfTables(new int[]{comment1OnArticle1, comment2OnArticle1});
 
         int articleText = fbb.createString("My Article On Flatbuffer");
+        
+        //2. Start Article object
         Article.startArticle(fbb);
         Article.addId(fbb, 1);
         Article.addArticleText(fbb, articleText);
         Article.addComments(fbb, commentsForArticleOnFB);
+        
+        //3. End ArticleObject
         int article = Article.endArticle(fbb);
 
+        //4. Once entire object is prepared, finish the flatbuffer on Article object
         fbb.finish(article);
         byte[] fbb1Bytes = fbb.sizedByteArray();
         
