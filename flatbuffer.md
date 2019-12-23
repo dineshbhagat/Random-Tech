@@ -255,6 +255,7 @@ public class FlatBuffer {
         byte[] fbb1Bytes = fbb.sizedByteArray();
         
         //if you want to get Object from byte buffer, here flatbuffer object is Article but to show the difference
+        // used in readDataFromFile method, 
         ByteBuffer cachedArray = ByteBuffer.wrap(fbb1Bytes);
         ArticleFlatBufferObject a = ArticleFlatBufferObject.getRootAsArticleFlatBufferObject(cachedArray);
         
