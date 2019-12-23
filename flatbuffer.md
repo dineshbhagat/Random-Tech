@@ -73,10 +73,18 @@ NOTE: on deciding schema, if you have String field and whose values is bounded, 
 
 #### Install flatc and compile
 
-- Using Homebrew: `brew install flatbuffers --HEAD`
+- Using Homebrew: 
+```bash
+# There might be compatibility issue if you install latest version
+brew install flatbuffers --HEAD
+
+# Should fix on particular version and install and use only that version.
+brew install flatbuffers
+```
+
 - [SO](https://stackoverflow.com/q/24275803/2987755)
 
-```sh
+```bash
 ./flatc --gen-mutable --java fbDemo.fbs
 ```
 
@@ -186,6 +194,10 @@ You need to add following dependency
     implementation("com.google.flatbuffers:flatbuffers-java:1.11.1")
 ```
 
+You can write Util class to convert to and fro from POJO to FlatBuffer Object (if you are getting data from POJO)
+
+
+**POJOObject <--> FlatBufferUtils <--> FlatBufferObject**
 
 
 #### code
@@ -353,7 +365,7 @@ Json file
 }
 ```
 Command to convert to binary file
-```sh
+```bash
 ./flatc -o <path-where-you-want-your-bin-file> -b Article.fbs Article.json
 ```
 This will generate file with name Article.bin which will contain the FlatBuffer binary representation of the contents from our Article.json file.
