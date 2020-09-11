@@ -33,3 +33,7 @@ Ref:
 https://gist.github.com/tierra/aa8bb18ce04b4d055593
 
 https://eureka.ykyuen.info/2014/08/22/statsd-installation-and-integration-with-graphite/
+
+https://github.com/statsd/statsd/wiki#client-implementations
+
+
