@@ -16,9 +16,10 @@ Your `config.js` should look similar to this:
   graphitePort: 2003
 , graphiteHost: "localhost"
 , port: 8125
-, backends: [ "./backends/graphite" ]
-, debug: true
+, backends: [ "./backends/graphite", "./backends/console" ] // console is for debug
+, debug: true // For debug
 , dumpMessages: true
+, graphite: { legacyNamespace: false } // Better group all collected metrics under stats
 }
 ```
 
