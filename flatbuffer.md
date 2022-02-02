@@ -370,6 +370,11 @@ Command to convert to binary file
 ```
 This will generate file with name Article.bin which will contain the FlatBuffer binary representation of the contents from our Article.json file.
 
+Kotlin Support:   
+```kotlin
+flatc --gen-mutable --gen-jvmstatic --kotlin mySchema.fbs
+```
+
 
 #### Ref:
 
@@ -386,5 +391,9 @@ https://github.com/ScreamingUdder/wiki/wiki/Sending-FlatBuffers-through-Kafka-in
 https://github.com/google/flatbuffers/blob/master/tests/JavaTest.java
 
 Language Level features: https://google.github.io/flatbuffers/flatbuffers_support.html
+
+Kotlin support: https://chromium.googlesource.com/external/github.com/google/flatbuffers/+/refs/heads/master/docs/source/KotlinUsage.md
+
+
 
 
